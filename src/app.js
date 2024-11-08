@@ -1,9 +1,6 @@
 import express from "express";
 import conectaNaDataBase from "./config/dbConnect.js";
-import condominiosRoutes from "./routes/condominiosRoutes.js"; // Importando rotas de condomínios
-import moradoresRoutes from "./routes/moradoresRoutes.js"; // Importando rotas de moradores
-import pedidosRoutes from "./routes/pedidosRoutes.js"; // Importando rotas de pedidos
-import loginRoutes from "./routes/loginRoutes.js";
+import usuarioRoutes from "./routes/usuarioRoutes.js";
 import dotenv from 'dotenv';
 import cors from "cors";
 
@@ -27,9 +24,6 @@ app.use(express.json());
 app.use(cors());
 
 // Registrando as rotas
-app.use(condominiosRoutes); // Usando as rotas de condomínios
-app.use(moradoresRoutes); // Usando as rotas de moradores
-app.use(pedidosRoutes); // Usando as rotas de pedidos
-app.use(loginRoutes);
+app.use(usuarioRoutes);
 
 export default app;
